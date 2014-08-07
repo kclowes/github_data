@@ -7,7 +7,7 @@ feature 'welcome page' do
 
       visit root_path
 
-      expect(page).to have_content(2371)
+      expect(page).to have_css('#placeholder')
     end
   end
 end

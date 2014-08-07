@@ -1,13 +1,12 @@
-<div class="drops">
-  <ul></ul>
+<div id="placeholder" style="width:600px;height:600px"></div>
 
-  <% @data.each do |point| %>
-    <%= point %>
-  <% end %>
-</div>
 
 <script>
-  $(document).ready(function () {
-    droplets();
+ $(document).ready(function () {
+var data = <%= @data %>
+      plotIt(
+        [data]
+     );
   });
 </script>
+

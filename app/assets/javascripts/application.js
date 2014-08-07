@@ -12,30 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.flot
+//= require jquery.flot.axislabels
 //= require_tree .
 
-function droplets() {
-// Number of drops in the screen
-  ndrops = 1000;
-// Width and Height of the screen
-  wW = $(window).width();
-  WH = $(window).height();
-// Loop
-  for (i = 0; i <= ndrops; i++) {
-    // drop
-    dp = "<li class='d" + i + "'></li>";
-    // Random values for X, Y position
-    dX = Math.floor((Math.random() * wW) + 1) + "px";
-    dY = Math.floor((Math.random() * WH) + 1) + "px";
-    // Random values for scale
-    dS = Math.floor((Math.random()) + 1) * 0.3;
-    // Random values for Opacity, Width and Height
-    dO = (Math.floor((Math.random() * 2) + 1) * 0.5);
-    dW = Math.floor((Math.random()*30)+30) + "px";
-    dH = Math.floor((Math.random() * 20) + 18) + "px";
-    // Append the drops
-    $("ul").append(dp);
-    // Apply the random values
-    $(".d" + i).css("opacity", dO).css("width", dW).css("height", dH).css({"margin-left": dX, y: dY, scale: dS});
-  }
+function plotIt(data) {
+  $.plot('#placeholder', data, {
+    series: {
+      bars: {
+        show: true
+      }
+    },
+    yaxis: {
+      axisLabel: '# of Commits'
+    },
+    xaxis: {
+      axisLabel: 'Day of the Week'
+    }
+  });
 }

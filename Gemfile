@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'faraday', '~> 0.9.0'
 gem 'json', '~> 1.8.1'
+gem 'flot-graph-rails', '~> 1.0.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

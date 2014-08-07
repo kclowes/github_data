@@ -18,9 +18,25 @@ class CommitsOverTime
     result.to_h.to_a
   end
 
-  def only_print_numbers
-    graph_data.map do |array|
-      array.last
+  def day_conversion
+    graph_data.each do |data_point|
+      if data_point.first == 0
+        data_point[0] = 'Sunday'
+      elsif data_point.first == 1
+        data_point[0] = 'Monday'
+      elsif data_point.first == 1
+        data_point[0] = 'Tuesday'
+      elsif data_point.first == 1
+        data_point[0] = 'Wednesday'
+      elsif data_point.first == 1
+        data_point[0] = 'Thursday'
+      elsif data_point.first == 1
+        data_point[0] = 'Friday'
+      elsif data_point.first == 1
+        data_point[0] = 'Saturday'
+      end
     end
+
   end
+
 end
