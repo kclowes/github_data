@@ -1,2 +1,13 @@
-<%= @api_data %>
+<div class="drops">
+  <ul></ul>
 
+  <% @data.each do |point| %>
+    <%= point %>
+  <% end %>
+</div>
+
+<script>
+  $(document).ready(function () {
+    droplets();
+  });
+</script>

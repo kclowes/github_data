@@ -7,7 +7,7 @@ feature 'welcome page' do
 
       visit root_path
 
-      expect(page).to have_content('[[0, 0, 131]')
+      expect(page).to have_content(2371)
     end
   end
 end
